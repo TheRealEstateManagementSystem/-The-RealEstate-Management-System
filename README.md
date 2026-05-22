@@ -5,7 +5,7 @@ Manage Your Property With Ease
 
 [![Java EE](https://img.shields.io/badge/JavaEE-7.0-blue.svg)](https://javaee.github.io/)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)](https://www.postgresql.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 An enterprise-grade software solution designed to streamline real estate operations, manage multi-tenant compliance registers, and automate workflow auditing pipelines. The platform coordinates operations between property managers, owners, maintenance personnel, tenants, administrators, and real estate agents.
 
