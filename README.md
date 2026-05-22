@@ -1,13 +1,12 @@
 # -The-RealEstate-Management-System(REMS)
 Manage Your Property With Ease
-
-
+# Real Estate Management System (REMS)
 
 [![Java EE](https://img.shields.io/badge/JavaEE-7.0-blue.svg)](https://javaee.github.io/)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)](https://www.postgresql.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An enterprise-grade software solution designed to streamline real estate operations, manage multi-tenant compliance registers, and automate workflow auditing pipelines. The platform coordinates operations between property managers, owners, maintenance personnel, tenants, administrators, and real estate agents.
+An enterprise-grade property compliance and tracking engine tailored for the South African property management ecosystem. Built on a modular monolithic Java EE architecture, this application processes operational registers and structures multi-table log records into on-screen verification tables before compiling secure compliance document exports (`.pdf`, `.csv`, `.txt`).
 
 ---
 
@@ -29,7 +28,7 @@ The primary objective of the **Real Estate Management System (REMS)** is to repl
 Key functional objectives include:
 *   **Property Registry Lifecycle:** Automated property data capture, historical data updates, and media/document correlation.
 *   **Tenant Workflow Automation:** Simplified tenant screening, secure admission tracking, lease management, and structured tenant departure verification.
-*   **Operational Logs:** Integrated maintenance request tracking, property inspections monitoring, and financial sales logging.
+*   **Operational Logs:** Integrated maintenance request tracking, property inspections monitoring, and historical management registers.
 *   **Compliance Analytics:** On-screen data previews paired with multi-format audit report compilation (`.pdf`, `.csv`, `.txt`) matching programmatic South African market requirements.
 
 ---
@@ -37,22 +36,21 @@ Key functional objectives include:
 ## 👤 System Actors
 
 The platform isolates system interactions into six discrete role-based profiles:
-1.  **Administrator:** Monitors system state telemetry, analyzes financial transactions, reviews logs, handles validation exceptions, and issues structural governance documents.
+1.  **Administrator:** Monitors system state telemetry, reviews operational logs, handles validation exceptions, and issues structural governance documents.
 2.  **Property Manager:** Manages listing states, reviews application workflows, and monitors ongoing occupancy balances.
-3.  **Property Owner:** Tracks active assets, monitors incoming revenue allocations, and tracks building depreciation data.
+3.  **Property Owner:** Tracks active assets and monitors structural property allocation logs.
 4.  **Real Estate Agent:** Captures incoming property assets, updates marketing data, links physical files/images, and logs active sales agreements.
-5.  **Tenant:** Searches active listings, submits rental application forms, runs secure payments, and files maintenance tickets.
-6.  **Maintenance Staff:** Audits incoming maintenance requests, updates repair pipeline metrics, logs associated expenses, and commits engineering action reports.
+5.  **Tenant:** Searches active listings, submits rental application forms, and files maintenance tickets.
+6.  **Maintenance Staff:** Audits incoming maintenance requests, updates repair pipeline metrics, logs resource allocations, and commits engineering action reports.
 
 ---
 
 ## ⚡ Functional Requirements Matrix
 
 *   **Authentication Tier:** Secure multi-role user registration and cryptographic user session authentication.
-*   **Data Capture Layer:** Form validation structures for property details, ownership metrics, and pricing arrays.
+*   **Data Capture Layer:** Form validation structures for property details, ownership metrics, and structural specifications.
 *   **Document Management Storage:** Relational mapping of media attachments, tenancy contracts, and physical inspection documents.
 *   **Tenancy Lifecycle Pipelines:** Tracking engines handling onboarding profiles, active lease monitoring, dispute management, and departure slip generation.
-*   **Financial Processing Unit:** Safe processing endpoints for tracking rent transfers, deposit escrows, and sales transactions.
 *   **Maintenance Workflows:** Dynamic engineering tickets allowing status transformations, photo attachments, and prioritization updates.
 
 ---
@@ -68,12 +66,12 @@ The platform isolates system interactions into six discrete role-based profiles:
 | **Property Agent captures property** | Enters building details profile | Property Agent | Capture Property Data | Generates new active property registry row | Database |
 | **Agent uploads property photo** | Attaches structural image media | Property Agent | Upload Property Photo | Persists media array to record mapping | Database |
 | **Tenant admitted to property** | Assigns tenant profile to unit | Data Clerk | Record Tenant Submission | Transforms target property state mapping | Database |
-| **Property sale recorded** | Completes purchasing ledger | Property Agent | Record Property Sale | Commits irreversible financial transaction row | Database / Admin |
+| **Property sale recorded** | Completes entry profile | Property Agent | Record Property Sale | Commits asset handoff logging row | Database / Admin |
 | **Tenant submits maintenance request** | Requests utility repair help | Tenant | Record Maintenance Request| Inserts active engineering ticket row | Database / Admin |
 | **Administrator generates property report**| Invokes property asset breakdown | Administrator | Print Property Report | Compiles real-time property catalog output | Administrator |
 | **Administrator generates tenant report**  | Invokes active lease audit trail | Administrator | Print Tenant Report | Compiles live tenancy summary ledger | Administrator |
-| **Administrator generates sales report**   | Invokes structural financial data | Administrator | Print Sales Report | Compiles historical transaction summary | Administrator |
-| **Administrator generates maintenance report**| Invokes engineering ticket log | Administrator | Print Maintenance Report | Compiles cost and performance analysis | Administrator |
+| **Administrator generates sales report**   | Invokes historical ledger review | Administrator | Print Sales Report | Compiles historical volume summary output | Administrator |
+| **Administrator generates maintenance report**| Invokes engineering ticket log | Administrator | Print Maintenance Report | Compiles status and timeline metrics | Administrator |
 
 ---
 
@@ -81,7 +79,7 @@ The platform isolates system interactions into six discrete role-based profiles:
 
 ### 1. Capture Property Data
 *   **Triggering Event:** A Property Manager decides to add a new property listing into the system.
-*   **Brief Description:** A real estate agent records complete property information (owner details, property specifications, pricing, and images) into the system so that the property can be listed for sale or rent.
+*   **Brief Description:** A real estate agent records complete property information (owner details, property specifications, and images) into the system so that the property can be listed for sale or rent.
 *   **Primary Actor:** Property Manager
 *   **Related Use Cases:** `Validate Owner Details`, `Upload Property Images`, `Verify Property Information`
 *   **Pre-conditions:**
