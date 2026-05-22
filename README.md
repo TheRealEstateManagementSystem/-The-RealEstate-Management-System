@@ -92,3 +92,44 @@ The platform isolates system interactions into six discrete role-based profiles:
     *   Property becomes available for search and listing.
     *   Confirmation is displayed to the agent.
 *   **Flow of Activities:**
+
+
+---
+
+## 🗺️ Implementation WBS (Work Breakdown Structure)
+
+The execution map for bringing the system into software production is planned according to the following system lifecycles:
+
+*   **Phase 1: Foundation & Data Modeling (Sprint 1)**
+    *   Initialize structural relational physical schema scripts for database containment.
+    *   Establish structural entity mappings (`Report.java`, `User.java`, `Property.java`).
+    *   Establish baseline low-level database connection factories (`DBConnection.java`).
+*   **Phase 2: Persistent Storage Layer Development (Sprint 2)**
+    *   Code internal structural data processing methods inside `ReportDAO.java`.
+    *   Optimize multi-table data processing connections using optimized `JOIN` operations.
+    *   Build localized parameter arrays matching regional filter actions.
+*   **Phase 3: Controller Routing & Document Streams (Sprint 3)**
+    *   Initialize transaction endpoints inside the central controller layer (`ReportServlet.java`).
+    *   Incorporate OpenPDF document compilation modules for compiling formatting routines.
+    *   Secure low-level memory parameters against streaming context thread block blocks.
+*   **Phase 4: Web Presentation Integration (Sprint 4)**
+    *   Refine structural compilation frameworks across view pages (`Report.jsp`).
+    *   Enforce layout preservation guidelines using CSS layout boundaries.
+    *   Validate asynchronous messaging parameters across front-to-back operations.
+
+---
+
+## ⚙️ Local Development Setup
+
+### Prerequisite Checklist
+*   Apache Tomcat 9.0+ web profile server runtime environment
+*   Java Development Kit (JDK) 8 or higher
+*   PostgreSQL / MySQL server installation
+
+### Installation Instructions
+
+1. **Clone the repository:**
+   
+```bash
+   git clone [https://github.com/YourUsername/real-estate-reporting-module.git](https://github.com/YourUsername/real-estate-reporting-module.git)
+   cd real-estate-reporting-module
